@@ -27,3 +27,7 @@ def print_triangle(n, full=False):
 		while pos >= 1:
 			print('*' * pos)
 			pos -= 1
+
+# Returns a histogram with item counts.			
+def histogram(items):
+	return 'Make me do something!'
