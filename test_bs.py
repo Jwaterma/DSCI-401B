@@ -20,3 +20,6 @@ print("\n\n")
 bs.print_triangle(5)
 print("\n\n")
 bs.print_triangle(5, full=True)
+
+# Test the histogram function.
+print(bs.histogram(['a', 'x', 2, 'x', 3, 2]))

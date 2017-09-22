@@ -30,4 +30,13 @@ def print_triangle(n, full=False):
 
 # Returns a histogram with item counts.			
 def histogram(items):
+	d = {}
+	for i in items:
+		if not(d.has_key(i)):
+			d[i] = 0
+		d[i] += 1 
+	return d
+	
+# Reads in a file and gets the word counts as a histogram.
+def word_counts(file_path, case_sensitive=True):
 	return 'Make me do something!'
