@@ -23,3 +23,6 @@ bs.print_triangle(5, full=True)
 
 # Test the histogram function.
 print(bs.histogram(['a', 'x', 2, 'x', 3, 2]))
+
+# Test the word_count function.
+print(bs.word_counts('./data/sample_text.txt', case_sensitive=False))

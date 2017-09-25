@@ -38,5 +38,22 @@ def histogram(items):
 	return d
 	
 # Reads in a file and gets the word counts as a histogram.
-def word_counts(file_path, case_sensitive=True):
-	return 'Make me do something!'
+def word_counts(file_path, case_sensitive=True, treat_punct_as_word = False, punct = ['!', '.', ',', '"', '?', '~']):
+	text = open(file_path, 'r').read()
+	if not(case_sensitive):
+		text = text.lower()
+	# TODO: Add code to count each punctuation character
+	# For time being, remove punctuation characters:
+	for p in punct:
+		text = text.replace(p, ' ')
+	words = text.split(' ')
+	cleaned_words = []
+	for w in words:
+		if len(w) > 0:
+			cleaned_words.append(w.strip())
+	return histogram(cleaned_words)		
+	
+	
+	
+	
+	
