@@ -26,3 +26,7 @@ print(bs.histogram(['a', 'x', 2, 'x', 3, 2]))
 
 # Test the word_count function.
 print(bs.word_counts('./data/sample_text.txt', case_sensitive=False))
+print(bs.my_max([2,4,1,9,5])) # Should print 9
+
+print(bs.variable_number_of_inputs(2, 3))
+print(bs.variable_number_of_inputs(2, 3, 4, 5, 6, "Something", "Else"))

@@ -53,7 +53,20 @@ def word_counts(file_path, case_sensitive=True, treat_punct_as_word = False, pun
 			cleaned_words.append(w.strip())
 	return histogram(cleaned_words)		
 	
+# Returns the maximum (largest) element in the list.
+def my_max(elements):
+	if len(elements) > 0:
+		curr_max = elements[0]
+		for e in elements:
+			if e > curr_max:
+				curr_max = e
+		return curr_max
+	return None
 	
-	
-	
+	# Illustrate variable-length inputs into a funcion
+def variable_number_of_inputs(a, b, *rest):
+	print("A is " + str(a))
+	print("B is " + str(b))
+	for e in rest:
+		print("  Next Optional Input: " + str(e))
 	
