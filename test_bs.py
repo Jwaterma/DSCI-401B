@@ -28,5 +28,6 @@ print(bs.histogram(['a', 'x', 2, 'x', 3, 2]))
 print(bs.word_counts('./data/sample_text.txt', case_sensitive=False))
 print(bs.my_max([2,4,1,9,5])) # Should print 9
 
+# Test variable-length inputs to functions.
 print(bs.variable_number_of_inputs(2, 3))
 print(bs.variable_number_of_inputs(2, 3, 4, 5, 6, "Something", "Else"))
