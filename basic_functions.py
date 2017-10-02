@@ -69,4 +69,16 @@ def variable_number_of_inputs(a, b, *rest):
 	print("B is " + str(b))
 	for e in rest:
 		print("  Next Optional Input: " + str(e))
+		
+# Implement fzip - Zip a set of lists and collapse resulting tuples
+# based on an aggregating function f.
+def fzip(f, *lists):
+	return map(lambda tup: f(*tup), zip(*lists))
+
+def sum_range(a, b):
+	if a == b:
+		return a
+	else:
+		return sum_range(a, b - 1) + b
+
 	

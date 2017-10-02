@@ -31,3 +31,7 @@ print(bs.my_max([2,4,1,9,5])) # Should print 9
 # Test variable-length inputs to functions.
 print(bs.variable_number_of_inputs(2, 3))
 print(bs.variable_number_of_inputs(2, 3, 4, 5, 6, "Something", "Else"))
+
+# Test the fzip function.
+print(bs.fzip(lambda x, y: x + y, [1,2,3], [4,5,6]))
+print(bs.fzip(max, [1,2,3], [4,5,6], [7,8,9]))
