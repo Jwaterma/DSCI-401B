@@ -75,10 +75,16 @@ def variable_number_of_inputs(a, b, *rest):
 def fzip(f, *lists):
 	return map(lambda tup: f(*tup), zip(*lists))
 
+# A recursive definition of summing numbers over a range.
 def sum_range(a, b):
 	if a == b:
 		return a
 	else:
 		return sum_range(a, b - 1) + b
 
-	
+# Recursively reverse a list.
+def rrev(elements):
+	if elements == []:
+		return []
+	else:
+		return rrev(elements[1:]) + [elemements[0]]

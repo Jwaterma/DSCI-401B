@@ -35,3 +35,7 @@ print(bs.variable_number_of_inputs(2, 3, 4, 5, 6, "Something", "Else"))
 # Test the fzip function.
 print(bs.fzip(lambda x, y: x + y, [1,2,3], [4,5,6]))
 print(bs.fzip(max, [1,2,3], [4,5,6], [7,8,9]))
+
+# Test the sum_range function.
+print(bs.sum_range(1,10))
+print(bs.sum_range(1,100))
