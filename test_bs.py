@@ -39,3 +39,8 @@ print(bs.fzip(max, [1,2,3], [4,5,6], [7,8,9]))
 # Test the sum_range function.
 print(bs.sum_range(1,10))
 print(bs.sum_range(1,100))
+
+# Test the fib function.
+print(bs.fib(1,1,6))
+print(bs.fib(1,1,10))
+print(bs.fib(1,1,100))

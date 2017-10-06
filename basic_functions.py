@@ -88,3 +88,12 @@ def rrev(elements):
 		return []
 	else:
 		return rrev(elements[1:]) + [elemements[0]]
+		
+# Recursively compute the nth fibonacci number.
+def fib(first, second, n):
+	if n == 1:
+		return first
+	if n == 2:
+		return second
+	else:
+		return fib(first, second, n - 1) + fib(first, second, n - 2)
