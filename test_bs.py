@@ -43,4 +43,6 @@ print(bs.sum_range(1,100))
 # Test the fib function.
 print(bs.fib(1,1,6))
 print(bs.fib(1,1,10))
-print(bs.fib(1,1,100))
+
+# Test the mfib function.
+print(bs.mfib(1,1,100))

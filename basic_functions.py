@@ -97,3 +97,17 @@ def fib(first, second, n):
 		return second
 	else:
 		return fib(first, second, n - 1) + fib(first, second, n - 2)
+		
+# Recursively compute the nth fibonacci number - use memoization to
+# avoid resolving sub-problems.
+def mfib(first, second, n, cache={}):
+	if n == 1:
+		return first
+	if n == 2:
+		return second
+	elif cache.has_key(n):
+		return cache[n]
+	else:
+		v = mfib(first, second, n - 1, cache) + mfib(first, second, n - 2, cache)
+		cache[n] = v
+		return v
