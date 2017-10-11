@@ -46,3 +46,7 @@ print(bs.fib(1,1,10))
 
 # Test the mfib function.
 print(bs.mfib(1,1,100))
+
+# Test the cartesian_product function.
+print(bs.cartesian_product([1,2], [3,4]))
+print(bs.cartesian_product([1,2], [3,4], [5,6,7]))

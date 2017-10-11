@@ -1,5 +1,8 @@
 # These are some examples of python-style function definitions.
 
+# If using Python 3:
+# from functools import *
+
 # Simple example: Add two numbers
 def add_2(x, y):
 	return x + y
@@ -111,3 +114,15 @@ def mfib(first, second, n, cache={}):
 		v = mfib(first, second, n - 1, cache) + mfib(first, second, n - 2, cache)
 		cache[n] = v
 		return v
+
+# Compute the cartesian product of the given sets.		
+def cartesian_product(*sets):
+	if len(sets) == 1:
+		return map(lambda x: [x], sets[0])
+	else:
+		rest = cartesian_product(*sets[1:])
+		combine = lambda x: map(lambda y: [x] + y, rest)
+		return reduce(lambda x,y: x + y, map(combine, sets[0]))
+		
+
+	
