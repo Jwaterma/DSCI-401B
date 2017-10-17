@@ -123,6 +123,26 @@ def cartesian_product(*sets):
 		rest = cartesian_product(*sets[1:])
 		combine = lambda x: map(lambda y: [x] + y, rest)
 		return reduce(lambda x,y: x + y, map(combine, sets[0]))
-		
 
+# Finds all distinct combinations of k elements taken from elts. 		
+def kcomb(elts, k):
+	if len(elts) == k:
+		return [elts]
+	if k == 1:
+		return map(lambda x: [x], elts)
+	else:
+		partials = kcomb(elts[1:], k - 1)
+		return map(lambda x: [elts[0]] + x, partials) + kcomb(elts[1:], k)
+		
+# Build a compositional pipe function - build a new function
+# that applies the specified functions in sequence to an input.
+def pipe(*function_sequence):
+	def applier(input):
+		output = input
+		for f in function_sequence:
+			output = f(output)
+		return output
+	return applier
+
+	
 	

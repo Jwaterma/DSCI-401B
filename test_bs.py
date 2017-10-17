@@ -50,3 +50,22 @@ print(bs.mfib(1,1,100))
 # Test the cartesian_product function.
 print(bs.cartesian_product([1,2], [3,4]))
 print(bs.cartesian_product([1,2], [3,4], [5,6,7]))
+
+# Test the kcomb function.
+print(bs.kcomb([1, 2, 3, 4], 2))
+print(bs.kcomb([1, 2, 3, 4, 5, 6], 3))
+
+# Print combinations a tuples.
+print(map(lambda x: tuple(x), bs.kcomb([1, 2, 3, 4, 5, 6], 3)))
+
+# ---- Test the pipe function. ---
+f1 = lambda x: x + 3
+f2 = lambda x: x * x
+f3 = lambda x: x / 2.3
+f4 = lambda x: x ** 0.5
+
+# Construct a new function that pipes the above in sequence.
+my_pipe = bs.pipe(f1, f2, f3, f4)
+
+# Apply my_pipe to the numbers [1, 2, 3 ... 20]
+print(map(my_pipe, range(1, 21)))
