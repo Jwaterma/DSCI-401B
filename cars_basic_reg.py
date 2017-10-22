@@ -57,4 +57,6 @@ print('MSE, MAE, R^2, EVS: ' + str([mean_squared_error(y_test, preds), \
 							   median_absolute_error(y_test, preds), \
 							   r2_score(y_test, preds), \
 							   explained_variance_score(y_test, preds)])) 
+
 	
+						   
