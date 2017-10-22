@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 import pprint
 from sklearn.datasets import load_boston
 from sklearn import linear_model
@@ -16,6 +17,11 @@ data_x = cars[list(cars)[1:]]
 # Get mpg column and use as response variable.
 data_y = cars[list(cars)[0]] 
 
+# ---------------- Part 0: Do a pairs plot to see potential relationships -------
+sm = pd.plotting.scatter_matrix(cars, diagonal='kde')
+# plt.tight_layout()
+plt.show()
+
 # ---------------- Part 1: Do a basic linear regression -------------------------
 
 # Create a least squares linear regression model.
@@ -24,6 +30,7 @@ model = linear_model.LinearRegression()
 # Training data used to train the algorithm, test is to assess performance.
 # These should always be different - we will correct this below.
 x_train, x_test, y_train, y_test = data_x, data_x, data_y, data_y
+
 
 # Fit the model.
 model.fit(x_train,y_train)

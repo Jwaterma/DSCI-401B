@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import pprint
+import matplotlib.pyplot as plt
 
 # Read in the cars dataset.
 cars = pd.read_csv('./data/cars.csv.')
@@ -45,3 +46,6 @@ print(cars.groupby('cyl')['mpg'].mean())
 # Get avg. MPG for each distinctcylinder/am combination.
 print(cars.groupby(['cyl', 'am'])['mpg'].mean())
 
+# ------ Pairs Plot Examples ------------------
+sm = pd.plotting.scatter_matrix(cars)
+plt.show()
