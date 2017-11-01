@@ -49,7 +49,7 @@ features.remove('Bush%')
 # Select x and y data
 data_x = df[features]
 
-# Get mpg column and use as response variable.
+# Get bush column and use as response variable.
 data_y = df['Bush%'] 
 
 # ---------- Create Linear Fit --------------------------------------------------------
