@@ -1,4 +1,4 @@
-# This illustrates a basic regression case.
+# This illustrates several feature selection methods for regression.
 
 import pandas as pd
 import matplotlib.pyplot as plt
