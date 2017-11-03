@@ -62,22 +62,3 @@ print('MSE, MAE, R^2, EVS: ' + str([mean_squared_error(y_test, preds), \
 							   r2_score(y_test, preds), \
 							   explained_variance_score(y_test, preds)])) 
 
-# ---------------- Part 3: Perform variable selection to arrive at the best model --
-
-# Create a least squares linear regression model.
-model = linear_model.LinearRegression()
-
-# Split training and test sets from main set. Note: random_state just enables results to be repeated.
-x_train, x_test, y_train, y_test = train_test_split(data_x, data_y, test_size = 0.2, random_state = 4)
-
-# Fit the model.
-model.fit(x_train,y_train)
-
-# Make predictions on test data and look at the results.
-preds = model.predict(x_test)
-pprint.pprint(pd.DataFrame({'Actual':y_test, 'Predicted':preds}))
-print('MSE, MAE, R^2, EVS: ' + str([mean_squared_error(y_test, preds), \
-							   median_absolute_error(y_test, preds), \
-							   r2_score(y_test, preds), \
-							   explained_variance_score(y_test, preds)])) 	
-						   
