@@ -29,14 +29,23 @@ data_y = cars[list(cars)[0]]
 imp = preprocessing.Imputer(missing_values='NaN', strategy='mean', axis=0)
 data_x = imp.fit_transform(data_x)
 
-# Normalize all predictors where mean = 1 and SD = 1
-data_x = preprocessing.normalize(data_x)
+
+# Normalize all predictors to range between 0 and 1.
+data_x_norm = preprocessing.normalize(data_x, axis=0)
+
+# Alternative - standardize all features to a column-based z-score.
+data_x_std = preprocessing.scale(data_x)
+
+print(data_x_std)
 
 # Many other kinds of scaling possible. For more options see
 # http://scikit-learn.org/stable/modules/preprocessing.html
 
 
 # ---------------- Part 2: Do linear regression with proper train/test split -------
+
+# Use data_std as our transformed data.
+data_x = data_x_std
 
 # Create a least squares linear regression model.
 model = linear_model.LinearRegression()
