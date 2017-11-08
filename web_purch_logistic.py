@@ -8,6 +8,7 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 from sklearn.metrics import roc_auc_score
+from sklearn.metrics import confusion_matrix
 
 data = pd.read_csv('./data/website-purchases.csv')
 
@@ -40,4 +41,5 @@ print('Precison: ' + str(precision_score(y_test, preds)))
 print('Recall: ' + str(recall_score(y_test, preds)))
 print('F1: ' + str(f1_score(y_test, preds)))
 print('ROC AUC: ' + str(roc_auc_score(y_test, preds)))
+print("Confusion Matrix:\n" + str(confusion_matrix(y_test, preds)))
 
