@@ -28,3 +28,8 @@ gnb_mod = naive_bayes.GaussianNB()
 gnb_mod.fit(x_train, y_train)
 preds = gnb_mod.predict(x_test)
 print_multiclass_classif_error_report(y_test, preds)
+
+# Illustrate recoding numeric classes back into original (text-based) labels.
+y_test_labs = le.inverse_transform(y_test)
+pred_labs = le.inverse_transform(preds)
+print('(Actual, Predicted): \n' + str(zip(y_test_labs, pred_labs)))
