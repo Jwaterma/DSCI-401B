@@ -1,4 +1,4 @@
-# This illustrates a decision tree on the iris data set.
+# Illustrates an SVM classifier on the glass data.
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
