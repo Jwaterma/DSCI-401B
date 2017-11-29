@@ -7,7 +7,7 @@ from data_util import *
 
 data = pd.read_csv('./data/glass.csv')
 
-# Get predictors - all non-Buy columns (Buy is column 0).
+# Get features and response data.
 features = list(data)
 features.remove('Type')
 data_x = data[features]
